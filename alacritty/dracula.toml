@@ -1,5 +1,0 @@
-[cursor.style]
-blinking = "Never"
-shape = "Underline"
-thickness = 1.0
-unfocused_hollow = false

@@ -1,27 +1,24 @@
-#import = "/home/void/.config/alacritty/dracula.toml"
+# This config for Alacritty is written in TOML.
+# For now, Alacritty release uses YAML. So this config won't work if you are using release package
 
-#import = "~/.config/alacritty/dracula.toml"
-
-[colors.bright]
-black = "#4C566A"
-blue = "#81A1C1"
-cyan = "#8FBCBB"
-green = "#A3BE8C"
-magenta = "#B48EAD"
-red = "#BF616A"
-white = "#ECEFF4"
-yellow = "#EBCB8B"
+# This sets the cursor style to underline "_" and makes it never blink
 
 [cursor.style]
 shape = "Underline"
 blinking = "Never"
 
+# This defines thickness of the cursor
+
 [cursor]
 thickness = 0.4
 unfocused_hollow = false
 
+# This allows the terminal to copy and paste from system clipboard
+
 [terminal]
 osc52 = "CopyPaste"
+
+# Nordic colors
 
 [colors.normal]
 black = "#3B4252"
@@ -37,14 +34,30 @@ yellow = "#EBCB8B"
 background = "#2E3440"
 foreground = "#D8DEE9"
 
+[colors.bright]
+black = "#4C566A"
+blue = "#81A1C1"
+cyan = "#8FBCBB"
+green = "#A3BE8C"
+magenta = "#B48EAD"
+red = "#BF616A"
+white = "#ECEFF4"
+yellow = "#EBCB8B"
+
+# Disables logs
+
 [debug]
 log_level = "Off"
+
+# Exports an environment variable when launching Alacritty
 
 [env]
 TERM = "alacritty"
 
 [font]
 size = 13.0
+
+# Font styles
 
 [font.bold]
 family = "Iosevka Slab"
@@ -62,9 +75,13 @@ style = "Italic"
 family = "Iosevka Slab"
 style = "Regular"
 
-[shell]
-#args = "-i"
-program = "/bin/fish"
+# You can use this setting to set a different shell from the login one
+# I commented that out because my login shell is Fish, of course
+
+#[shell]
+#program = "/bin/fish"
+
+# Sets bakcground opacity
 
 [window]
 decorations_theme_variant = "Dark"
