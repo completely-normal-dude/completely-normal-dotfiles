@@ -1,3 +1,5 @@
+# Really simple config
+
 theme = "nord"
 
 [editor.cursor-shape]
