@@ -1,0 +1,22 @@
+# Simple Tofi config, I don't use Tofi anymore
+
+font = Space Grotesk 
+font-size = 24
+
+outline-width = 0
+border-width = 0
+padding-left = 4%
+padding-top = 2%
+padding-right = 0
+padding-bottom = 0
+
+prompt-text = ""
+
+background-color = #0A0E10 
+text-color = #F7FDFF 
+selection-color = #24343A 
+
+width = 40%
+height = 40%
+
+hide-cursor = false 
