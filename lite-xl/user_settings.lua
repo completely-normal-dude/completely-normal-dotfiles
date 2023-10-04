@@ -37,6 +37,6 @@ return {
         ["rate"] = 0.5
       }
     },
-    ["theme"] = "tokyo-night"
+    ["theme"] = "nord"
   }
 }
