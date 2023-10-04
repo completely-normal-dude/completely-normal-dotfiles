@@ -1,0 +1,71 @@
+#import = "/home/void/.config/alacritty/dracula.toml"
+
+#import = "~/.config/alacritty/dracula.toml"
+
+[colors.bright]
+black = "#4C566A"
+blue = "#81A1C1"
+cyan = "#8FBCBB"
+green = "#A3BE8C"
+magenta = "#B48EAD"
+red = "#BF616A"
+white = "#ECEFF4"
+yellow = "#EBCB8B"
+
+[cursor.style]
+shape = "Underline"
+blinking = "Never"
+
+[cursor]
+thickness = 0.4
+unfocused_hollow = false
+
+[terminal]
+osc52 = "CopyPaste"
+
+[colors.normal]
+black = "#3B4252"
+blue = "#81A1C1"
+cyan = "#88C0D0"
+green = "#A3BE8C"
+magenta = "#B48EAD"
+red = "#BF616A"
+white = "#E5E9F0"
+yellow = "#EBCB8B"
+
+[colors.primary]
+background = "#2E3440"
+foreground = "#D8DEE9"
+
+[debug]
+log_level = "Off"
+
+[env]
+TERM = "alacritty"
+
+[font]
+size = 13.0
+
+[font.bold]
+family = "Iosevka Slab"
+style = "Bold"
+
+[font.bold_italic]
+family = "Iosevka Slab"
+style = "Bold Italic"
+
+[font.italic]
+family = "Iosevka Slab"
+style = "Italic"
+
+[font.normal]
+family = "Iosevka Slab"
+style = "Regular"
+
+[shell]
+#args = "-i"
+program = "/bin/fish"
+
+[window]
+decorations_theme_variant = "Dark"
+opacity = 0.9

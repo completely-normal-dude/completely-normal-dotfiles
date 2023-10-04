@@ -1,0 +1,58 @@
+# Config file for Waybar
+
+{
+
+# This defines the global layout of the bar
+    "layer": "top",
+    "height": 25,
+    "modules-left": ["river/tags", "river/mode"],
+    "modules-center": ["mpris"],
+    "modules-right": ["tray", "pulseaudio", "memory", "backlight", "clock"],
+
+# Here starts the configuration of every module
+    "river/mode": {
+        "format": " {}"
+    },
+    "river/tags": {
+        "num-tags": 5,
+        "tag-labels": ["I", "II", "III", "IV", "V"]
+    },
+    "tray": {
+        "spacing": 10
+    },
+    "clock": {
+        "format": "{: %I:%M %p   %d/%m}"
+    },
+    "backlight": {
+        "format": "{icon}{percent}%",
+        "format-icons": ["󰃞 ","󰃟 ", "󰃠 "]
+    },
+    "network": {
+    	"format": "{ifname}",
+	    "format-ethernet": "󰈀 {ifname}",
+        "format-wifi": " {essid}",
+        # "ala" is a symlink I made to alacritty, you probably want to change it. Or you can just erase this line
+        "on-click": "ala -e nmtui",
+    },
+    "pulseaudio": {
+		"tooltip": false,
+		"scroll-step": 5,
+		"format": "{icon} {volume}%",
+		"format-muted": "󰝟 {volume}%",
+		"on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right":"pavucontrol",
+		"format-icons": {
+			"default": ["󰕿 ", "", " "]
+		}
+	},
+    "memory": {
+        "format": "󰍛 {percentage}%",
+        "on-click": "alacritty -e htop"
+    },
+    "mpris": {
+	"format": "󰎄  <span style=\"oblique\">{title}</span>",
+    "on-click": "playerctl play-pause",
+    "max-length": 90
+	}
+       
+}

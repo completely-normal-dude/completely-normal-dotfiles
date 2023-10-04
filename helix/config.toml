@@ -1,0 +1,6 @@
+theme = "nord"
+
+[editor.cursor-shape]
+insert = "underline"
+normal = "underline"
+select = "underline"

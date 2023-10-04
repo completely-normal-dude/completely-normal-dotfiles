@@ -1,0 +1,1 @@
+return { path = "/home/void/Downloads/Kotatogram Desktop", documents = {["type"]="leaf",["views"]={[1]={["type"]="view",["scroll"]={["x"]=0,["y"]=0,["to"]={["x"]=0,["y"]=0}},["module"]="core.emptyview",["active"]=true}},["active_view"]=1}, directories = {} }

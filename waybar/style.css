@@ -1,0 +1,96 @@
+* {
+  border: none;
+  font-size: 14px;
+  border-radius: 0;
+  min-height: 0;
+  margin: 0 0px;
+}
+
+#mpris {
+  font-family: IosevkaTerm Nerd Font;
+  color: #BDE3ED;
+  font-weight: bold;
+}
+
+#tags button {
+  font-family: Iosevka Slab;
+  padding: 0 5px;
+  color: #BDE3ED;
+  border-radius: 0px;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#tags button:hover {
+  font-family: Iosevka Slab;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: inherit;
+  border-bottom: none;
+  border-radius: 0px;
+}
+
+#tags button.focused {
+  font-family: Iosevka Slab;
+  background-color: #BDE3ED;
+  color: #151515;
+  border-bottom: none;
+  border-radius: 0px;
+}
+
+#tags button.urgent {
+  font-family: Iosevka Slab;
+  background-color: #3F291A;
+}
+
+#mode {
+  font-family: Iosevka Slab;
+  background-color: #151515;
+  border-bottom: 1px solid #ffffff;
+}
+
+#tray,
+#clock,
+#backlight,
+#pulseaudio,
+#mode,
+#mpris,
+
+#memory {
+  color: #BDE3ED;
+  padding: 0 10px;
+}
+
+#clock {
+  margin: 0 0px;
+  color: #BDE3ED;
+}
+
+
+#backlight {
+  font-family: Iosevka Semibold;
+  color: #BDE3ED;
+}
+
+#tray {
+  color: #BDE3ED;
+  border-radius: 5px 0px 0px 5px;
+}
+
+#network {
+  font-family: Iosevka Semibold;
+  color: #BDE3ED;
+}
+
+#network.disconnected {
+  font-family: Iosevka Semibold;
+}
+
+#pulseaudio {
+  font-family: Iosevka Semibold;
+  color: #BDE3ED;
+  /*    border-radius: 5px 0px 0px 5px;*/
+}
+
+#pulseaudio.muted {
+  font-family: Iosevka Semibold;
+  color: #BDE3ED;
+}
