@@ -1,1 +1,1 @@
-return { path = "/home/void/aur/programming", documents = {["type"]="leaf",["active_view"]=1,["views"]={[1]={["text"]=false,["active"]=true,["type"]="doc",["filename"]="a.css",["scroll"]={["y"]=264.58332935969,["x"]=0},["selection"]={[1]=25,[2]=17,[3]=25,[4]=17}}}}, directories = {} }
+return { path = "/home/void/aur/programming", documents = {["active_view"]=1,["type"]="leaf",["views"]={[1]={["active"]=true,["scroll"]={["y"]=0,["x"]=0,["to"]={["x"]=0,["y"]=0}},["type"]="view",["module"]="core.emptyview"}}}, directories = {} }
