@@ -1,15 +1,14 @@
-# Config file for Waybar
 
 {
 
-# This defines the global layout of the bar
+// This defines the global layout of the bar
     "layer": "top",
     "height": 25,
     "modules-left": ["river/tags", "river/mode"],
     "modules-center": ["mpris"],
     "modules-right": ["tray", "pulseaudio", "memory", "backlight", "clock"],
 
-# Here starts the configuration of every module
+// Here starts the configuration of every module
     "river/mode": {
         "format": " {}"
     },
@@ -31,7 +30,7 @@
     	"format": "{ifname}",
 	    "format-ethernet": "󰈀 {ifname}",
         "format-wifi": " {essid}",
-        # "ala" is a symlink I made to alacritty, you probably want to change it. Or you can just erase this line
+        // "ala" is a symlink I made to alacritty, you probably want to change it. Or you can just erase this line
         "on-click": "ala -e nmtui",
     },
     "pulseaudio": {
