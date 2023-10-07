@@ -44,11 +44,11 @@ set -x QT_QPA_PLATFORMTHEME qt5ct
 if status is-login
      and status is-interactive
      and not pidof river
-     set upt (uptime -p | awk '{print $2$3}')
-     echo "Boot took $upt"
-     read response -n 1 -P "Start River?"\n"> "
+     set upt (awk '{print int($1)}' /proc/uptime)
+     echo "Boot took $upt seconds\n"
+     read response -n 1 -P "Launch River?"\n"> "
      switch $response
-        case y Y yes ""
+        case y Y ""
             dbus-run-session river &
         case '*'
             echo "Not starting River..."
