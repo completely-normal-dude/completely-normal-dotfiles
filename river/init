@@ -181,7 +181,7 @@ riverctl map normal Super+Shift T spawn kotato # This launches Kotatogram, a Tel
 kill pipewire # Kill PipeWire when starting River and then starting it again
 pipewire &
 riverctl keyboard-layout es
-riverctl focus-follows-cursor always
+riverctl focus-follows-cursor normal
 light -S 50 # Set brightness to 50% since Runit (Void Linux) doesn't restore this value on startup
 riverctl input touch-8521-21593-Weida_weida events disabled # This is for turning off my touch screen, you probably want to comment this out
 wl-clip-persist -c regular & # This is a little script that makes clipboard persist after apps close
