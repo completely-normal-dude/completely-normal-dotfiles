@@ -3,9 +3,10 @@
 # Requires Zenity installed
 
 if pidof -q pipewire 
-    and zenity --question --text="PipeWire is already running.\nDo you want to restart it?" # Spawns a GTK dialog box
+    if zenity --question --text="PipeWire is already running.\nDo you want to restart it?" # Spawns a GTK dialog box
         killall pipewire 
         pipewire &
+    end
 else
-    echo "Run Pipewire &"
+    pipewire &
 end
