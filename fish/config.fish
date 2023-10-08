@@ -45,7 +45,7 @@ if status is-login
      and status is-interactive
      and not pidof river
      set upt (awk '{print int($1)}' /proc/uptime)
-     echo "Boot took $upt seconds\n"
+     echo "Boot took $upt seconds"\n
      read response -n 1 -P "Launch River?"\n"> "
      switch $response
         case y Y ""
