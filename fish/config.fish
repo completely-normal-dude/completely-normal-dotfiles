@@ -15,6 +15,7 @@ if status is-interactive
     alias down="yt-dlp -x --audio-format mp3 --audio-quality 0"
     alias neo=neofetch
     alias :q=exit
+    alias gs="git status"
 end
 
 # Here is a little script to create a RUNTIME DIR. If you are using an distro with Systemd, you probably won't need this
