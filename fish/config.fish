@@ -38,21 +38,23 @@ set -x ELM_DISPLAY wl
 set -x QT_QPA_PLATFORMTHEME qt5ct
 
 # Little script that only runs if Fish runs interactively and as a login shell. 
-# If you have a display manager like gdm or lightdm, you won't need this
-# You can just press Return to start River. You can also type "Y" "y" to start it
+# If you have a display manager like GDM or LightDM, you won't need this
+# You can just press Return to start River. You can also type "Y" or "y" to start it
 # If you don't want to start River, just press Space or any letter before pressing Return
 
-if status is-login
-     and status is-interactive
-     and not pidof river
-     set upt (awk '{print int($1)}' /proc/uptime)
-     echo "Boot took $upt seconds"\n
+ if status is-login && status is-interactive && not pidof river
+     if not test $boot
+         set upt (awk '{print int($1)}' /proc/uptime)
+         echo \n"Boot took $upt seconds"\n
+         set -x boot 1
+     end
      read response -n 1 -P "Launch River?"\n"> "
      switch $response
         case y Y ""
+            echo "Launching River..."
             dbus-run-session river &
         case '*'
-            echo "Not starting River..."
+            echo "Not launching River..."
 end
 end
 
