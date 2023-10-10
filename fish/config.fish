@@ -42,7 +42,7 @@ set -x QT_QPA_PLATFORMTHEME qt5ct
 # You can just press Return to start River. You can also type "Y" or "y" to start it
 # If you don't want to start River, just press Space or any letter before pressing Return
 
- if status is-login && status is-interactive && not pidof river
+if status is-login && status is-interactive && not pidof -q river
      if not test $boot
          set upt (awk '{print int($1)}' /proc/uptime)
          echo \n"Boot took $upt seconds"\n
