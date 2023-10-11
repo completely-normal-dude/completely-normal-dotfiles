@@ -52,7 +52,7 @@ if status is-login && status is-interactive && not pidof -q river
      switch $response
         case y Y ""
             echo "Launching River..."
-            dbus-run-session river &
+            dbus-run-session river 
         case '*'
             echo "Not launching River..."
 end
