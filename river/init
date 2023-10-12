@@ -189,6 +189,6 @@ wl-clip-persist -c regular & # This is a little script that makes clipboard pers
 # Autostart stuff
 
 wbg /home/void/Pictures/nord.jpg & # Wallpaper
-/usr/libexec/polkit-gnome-authentication-agent-1 & # Polkit agent (this grants sudo permissions to GUI apps)
+# /usr/libexec/polkit-gnome-authentication-agent-1 & # Polkit agent (this grants sudo permissions to GUI apps)
 waybar --log-level off &
 dunst & # Notification daemon
