@@ -172,7 +172,7 @@ riverctl map normal Super+Shift I spawn "light -U 10"
 riverctl map normal Super+Shift O spawn "light -A 10"
 riverctl map normal Super E spawn pcmanfm
 riverctl map normal Super+Shift C spawn "playerctl play-pause"
-riverctl map normal Super+Shift E spawn wlogout
+riverctl map normal Super+Shift E spawn "wlogout -p layer-shell"
 riverctl map normal Super+Shift V "playerctl next"
 riverctl map normal Super+Shift T spawn kotato # This launches Kotatogram, a Telegram client
 

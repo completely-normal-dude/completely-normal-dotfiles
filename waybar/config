@@ -45,8 +45,11 @@
 		}
 	},
     "memory": {
-        "format": "󰍛 {percentage}%",
-        "on-click": "alacritty -e htop"
+        "format": "󰍛 {percentage}%{icon}",
+        "on-click": "alacritty -e htop",
+        "format-icons": {
+            "default": ["",""," "]
+        }
     },
     "mpris": {
 	"format": "󰎄  <span style=\"oblique\">{title}</span>",

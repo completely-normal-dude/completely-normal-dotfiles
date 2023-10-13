@@ -43,7 +43,7 @@ set -x QT_QPA_PLATFORMTHEME qt5ct
 # If you don't want to start River, just press Space or any letter before pressing Return
 
 if status is-login && status is-interactive && not pidof -q river
-     if not test $boot
+     if test $boot
          set upt (awk '{print int($1)}' /proc/uptime)
          echo \n"Boot took $upt seconds"\n
          set -x boot 1
@@ -63,5 +63,9 @@ end
 if not echo $PATH | rg -q cargo
     set -x PATH "$PATH:/home/void/.cargo/bin"
 end
+
+# asdf completions 
+
+source ~/.asdf/asdf.fish
 
 # You can find more information about Fish languague on https://fishshell.com/docs/current/language.html 
