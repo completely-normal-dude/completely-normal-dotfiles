@@ -2,7 +2,7 @@
 
 # A little script to restart Waybar, accepts "q" or "-q" as arguments to make Waybar quiet
 
-if pidof waybar
+if pidof -q waybar
     kill waybar
 end
 if test "$argv[1]" = "q"; or test "$argv[1]" = "-q"
