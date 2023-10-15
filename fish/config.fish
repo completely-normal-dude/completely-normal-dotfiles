@@ -18,6 +18,7 @@ if status is-interactive
     alias gs="git status"
     alias off="doas poweroff"
     alias rest="doas reboot"
+    alias dc=cd
 end
 
 # Here is a little script to create a RUNTIME DIR. If you are using an distro with SystemD, you probably won't need this

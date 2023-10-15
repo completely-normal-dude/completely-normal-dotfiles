@@ -41,11 +41,11 @@
 		"on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
         "on-click-right":"pavucontrol",
 		"format-icons": {
-			"default": ["󰕿 ", "", " "]
+			"default": ["󰕿", "", " "]
 		}
 	},
     "memory": {
-        "format": "󰍛 {percentage}%{icon}",
+        "format": "󰍛 %{icon}{percentage}",
         "on-click": "alacritty -e htop",
         "format-icons": {
             "default": ["",""," "]
