@@ -1,1 +1,0 @@
-return { path = "/home/void/aur/programming", documents = {["type"]="leaf",["active_view"]=1,["views"]={[1]={["scroll"]={["x"]=0,["to"]={["x"]=0,["y"]=0},["y"]=0},["type"]="view",["active"]=true,["module"]="core.emptyview"}}}, directories = {} }
