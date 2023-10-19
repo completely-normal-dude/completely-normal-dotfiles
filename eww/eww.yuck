@@ -1,0 +1,20 @@
+(defwindow example
+           :monitor 0
+           :geometry (geometry :x "0%"
+                               :y "20px"
+                               :width "90%"
+                               :height "30px"
+                               :anchor "top center")
+           :stacking "bg"
+           :windowtype "dock"
+           :wm-ignore false
+           (greeter :text "Is PipeWire running? ")
+)
+
+(defwidget greeter [?text]
+  (box :orientation "horizontal"
+       :halign "center"
+    text
+    (button :onclick "/home/void/.config/eww/a"
+      "Check")))
+
