@@ -1,6 +1,3 @@
-# This config for Alacritty is written in TOML.
-# For now, Alacritty release uses YAML. So this config won't work if you are using release package
-
 # This sets the cursor style to underline "_" and makes it never blink
 
 [cursor.style]
@@ -74,12 +71,6 @@ style = "Italic"
 [font.normal]
 family = "Iosevka Slab"
 style = "Regular"
-
-# You can use this setting to set a different shell from the login one
-# I commented that out because my login shell is Fish, of course
-
-#[shell]
-#program = "/bin/fish"
 
 # Sets bakcground opacity
 
