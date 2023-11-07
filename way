@@ -1,14 +1,15 @@
 #!/bin/fish
 
-# A little script to restart Waybar, accepts "q" or "-q" as arguments to make Waybar quiet
+# A little script to restart Waybar accepts "q" or "-q"
+# as arguments to make Waybar quiet
 
 if pidof -q waybar
     kill waybar
 end
-if test "$argv[1]" = "q"; or test "$argv[1]" = "-q"
+
+switch $argv[1]
+  case "q" "-q"
     waybar -l off &
-    disown (jobs -p)
-else
+  case "*"
     waybar &
-    disown (jobs -p)
 end
