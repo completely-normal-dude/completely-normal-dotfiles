@@ -2,3 +2,4 @@
 # Script to take screenshots on Wayland
 set window (slurp)
 grim -g "$window"
+notify-send "Saved screenshot!"
