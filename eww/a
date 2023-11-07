@@ -1,7 +1,0 @@
-#!/usr/bin/fish
-
-if pidof -q pipewire
-    notify-send "PipeWire is running"
-else
-    notify-send "PipeWire is not running"
-end
