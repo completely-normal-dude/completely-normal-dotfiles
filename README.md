@@ -1,5 +1,6 @@
 # Hyprland setup!
 ### Stuff:
+- Waybar
 - Alacritty
 - Fish
 - Hyprland
