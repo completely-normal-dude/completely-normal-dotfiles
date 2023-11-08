@@ -1,12 +1,12 @@
 #!/usr/bin/fish
 # Script to take screenshots on Wayland
 
+set window (slurp)
 set name $(echo | tofi -c ~/.config/tofi/nomatch-theme --prompt-text "Filename: ")
-switch $name 
-    case ""
-        exit
-    case "*"
-        set window (slurp)
-        grim -g "$window" - > ~/Pictures/$name.png
-        dunstify "  Screnshot saved in" " ~/Pictures/$name.png"
+switch $name
+case ""
+grim -g "$window"
+case "*"
+grim -g "$window" - > ~/Pictures/$name.png
+dunstify "  Screnshot saved in" " ~/Pictures/$name.png"
 end
