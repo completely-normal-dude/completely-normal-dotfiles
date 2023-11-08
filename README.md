@@ -11,3 +11,4 @@ There are Sway and River configuration files, but Hyprland's are a lot more poli
 
 # Screenshot
 ![Desktop](assets/Desktop.png)
+![power](assets/power.png)
