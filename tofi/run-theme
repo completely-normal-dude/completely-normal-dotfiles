@@ -1,0 +1,18 @@
+font = Martian Mono
+font-size = 32
+corner-radius = 30
+
+outline-width = 0
+border-width = 0
+padding-left = 100
+padding-top = 10
+padding-right = 0
+
+background-color = #2A2829
+text-color = #FAB4AC
+selection-color = #E58970
+require-match = false
+
+width = 50%
+height = 40%
+

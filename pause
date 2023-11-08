@@ -1,0 +1,11 @@
+#!/usr/bin/fish
+
+set state $(playerctl status -s)
+set title $(playerctl metadata title -s)
+
+if string match "Paused" $state -q; and not string match "Advertisement" $title -q
+	printf "󰏤"
+else 
+	printf " "
+end
+

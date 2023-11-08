@@ -1,0 +1,14 @@
+#!/usr/bin/fish 
+
+# Not very efficient...
+
+set actionarg $(tofi-drun -c ~/.config/tofi/run-theme --prompt-text "")
+set action $(string split " " $actionarg | sed -n '1p')
+set arg $(string split " " $action | sed -n '2p')
+
+switch $action 
+    case ""
+    exit
+    case "*"
+    $action $arg
+end

@@ -1,0 +1,10 @@
+#!/usr/bin/fish
+
+sleep 2
+dunst &
+swaybg -i ~/Pictures/clouds.jpg &
+wl-clip-persist --clipboard regular & # To make clipboard persist after apps close
+gnome-polkit &
+wl-paste -w cliphist store & # Saving clipboard history
+evtest --grab /dev/input/by-id/usb-Weida_weida-event-if00 > /dev/null & # This disables a touch device I don't need
+way h

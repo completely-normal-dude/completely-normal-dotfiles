@@ -1,0 +1,11 @@
+#!/bin/fish
+
+sleep 0.4
+
+switch $argv[1]
+    case ""
+     hyprpicker -a
+    case "r"
+     hyprpicker -a -f rgb
+end
+

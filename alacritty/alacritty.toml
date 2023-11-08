@@ -1,0 +1,44 @@
+ import = [
+   "~/.config/alacritty/rose-pine.toml"
+ ]
+
+[cursor.style]
+shape = "Underline"
+blinking = "Never"
+
+[cursor]
+thickness = 0.4
+unfocused_hollow = false
+
+[terminal]
+osc52 = "CopyPaste"
+
+[debug]
+log_level = "Off"
+
+[env]
+TERM = "alacritty"
+
+[font]
+size = 13.0
+
+[font.bold]
+family = "Martian Mono Std xBd"
+style = "Bold"
+
+[font.bold_italic]
+family = "Martian Mono Std xBd"
+style = "Bold Italic"
+
+[font.italic]
+family = "Martian Mono"
+style = "Italic"
+
+[font.normal]
+family = "Martian Mono"
+style = "Regular"
+
+[window]
+dimensions = {columns = 80, lines = 25}
+decorations_theme_variant = "Dark"
+opacity = 0.8

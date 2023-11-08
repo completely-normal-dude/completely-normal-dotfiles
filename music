@@ -1,0 +1,46 @@
+#!/usr/bin/fish
+
+# Waybar script to display music metadata 
+
+if not test (playerctl status -s)
+    printf " "
+    exit
+end
+
+
+set title $(playerctl metadata title -s)
+set artist $(playerctl metadata artist -s)
+
+# If strings contain an ampersand it needs to be replaced with &amp 
+# in order to properly display in Waybar
+
+if string match -qr "&" $title
+    set title $(string replace "&" "&amp;" $title -a)
+else if string match -qr "&" $artist
+    set artist $(string replace "&" "&amp;" $artist -a)
+end
+
+set toDisplay "󰎈   $title   -   󰠃    $artist"
+
+# Checks if an ad is playing, remove if you have Spotify premium
+
+if test $title = "Advertisement"
+    set toDisplay " 󰇘 "
+end
+
+# Checks if the title contains "(Official" which happens when
+# playing music on Youtube
+
+if string match -qr "\(Official" $title
+    set title $(printf $title | awk -F '(' '{print $1}')
+    set toDisplay "󰎈   $title   -   󰠃    $artist"
+end
+
+# Checks if title contains -, meaning the title probably
+# has the artist and name of the song
+
+if string match -qr " - " $title
+    set toDisplay "󰎈   $title"
+end
+
+printf $toDisplay

@@ -1,0 +1,8 @@
+# Really simple config
+
+theme = "base16_transparent"
+
+[editor.cursor-shape]
+insert = "underline"
+normal = "underline"
+select = "underline"

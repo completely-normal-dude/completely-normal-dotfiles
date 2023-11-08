@@ -1,0 +1,110 @@
+{
+  "layer": "top",
+  "margin-top": 5,
+  "margin-bottom": 5,
+  "modules-left": [
+    "sway/workspaces"
+  ],
+  "modules-center": [
+    "custom/music",
+    "custom/pause"
+  ],
+  "modules-right": [
+    "custom/clipboard",
+    "custom/picker",
+    "custom/restart",
+    "custom/logout",
+    "pulseaudio",
+    "memory",
+    "backlight",
+    "clock",
+    "clock#n2"
+  ],
+  "custom/clipboard": {
+    "format": "󰅌 ",
+    "on-click": "clip",
+    "on-click-right": "cliphist wipe"
+  },
+  "custom/pause": {
+    "exec": "pause",
+    "restart-interval": 2
+  },
+  "custom/logout": {
+    "format": " ",
+    "on-click": "logout-menu s"
+  },
+  "custom/music": {
+    "exec": "music",
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl next",
+    "restart-interval": 2
+  },
+  "custom/restart": {
+    "format": "󰜉",
+    "on-click": "way h"
+  },
+  "custom/picker": {
+    "format": "󰈋 ",
+    "on-click": "picker",
+    "on-click-right": "picker r"
+  },
+  "sway/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "default": "  ",
+      "focused": "  ",
+      "urgent": " 󰀨 "
+    },
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    }
+  },
+  "clock": {
+    "format": "{: %I:%M %p}"
+  },
+  "clock#n2": {
+    "format": "{: %d-%m}"
+  },
+  "backlight": {
+    "format": "{icon}{percent}%",
+    "scroll-step": 5,
+    "format-icons": [
+      "󰃞 ",
+      "󰃟 ",
+      "󰃠 "
+    ],
+    "on-click": "light -S 50",
+    "on-click-right": "light -S 0"
+  },
+  "pulseaudio": {
+    "tooltip": false,
+    "scroll-step": 5,
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟 {volume}%",
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-right": "pavucontrol",
+    "format-icons": {
+      "default": [
+        "󰕿",
+        "",
+        ""
+      ]
+    }
+  },
+  "memory": {
+    "format": "󰍛 {icon}{percentage}%",
+    "on-click": "alacritty -e htop",
+    "format-icons": {
+      "default": [
+        "",
+        "",
+        "",
+        "   "
+      ]
+    }
+  }
+}

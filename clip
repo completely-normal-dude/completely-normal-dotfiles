@@ -1,0 +1,5 @@
+#!/usr/bin/fish
+
+set tocopy $(cliphist list | awk -F '\t' '{print $2}' | tofi -c ~/.config/tofi/clip-theme --prompt-text "")
+
+wl-copy "$tocopy"

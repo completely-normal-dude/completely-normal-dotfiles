@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# This is the only Bash script I have. 
+# A version of this script with Fish is called fish-launcher
+# in this directory. It's a little more complicated than it should be
+# That's why I'm using this one
+
+action=$(tofi-drun -c ~/.config/tofi/run-theme --prompt-text "")
+exec $action

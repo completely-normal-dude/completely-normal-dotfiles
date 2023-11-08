@@ -1,0 +1,20 @@
+#!/usr/bin/fish
+
+set action $(cat .config/tofi/logout | tofi -c .config/tofi/theme-logout)
+
+if string match -qr "Power off" $action
+    systemctl poweroff
+else if string match -qr "Reboot" $action
+    systemctl reboot
+else if string match -qr "Logout" $action
+    switch $argv[1]
+        case "h"
+        killall Hyprland
+        case "s"
+        killall sway
+        case "r"
+        killall river
+        case "*"
+        zenity --warning --text="You'll have to kill this window manager manually..."
+    end
+end

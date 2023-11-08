@@ -1,0 +1,46 @@
+#!/usr/bin/fish
+
+function checkwaybar
+  if pidof -q waybar
+    kill waybar
+    return 0
+  else
+    return 1
+  end
+end
+
+switch $argv[1]
+    case "-r" "r" 
+      checkwaybar
+      waybar -l off -c ~/.config/waybar/config.jsonc &
+      return 0
+    case "-h" "h"
+      checkwaybar
+      waybar -l off -c ~/.config/waybar/hyprconfig.jsonc -s ~/.config/waybar/hyprstyle.css &
+      return 0
+    case "-s" "s"
+      checkwaybar
+      waybar -l off -c ~/.config/waybar/swayconfig.jsonc -s ~/.config/waybar/swaystyle.css &
+      return 0
+    case "n" "-n"
+      checkwaybar
+      waybar -l off -c ~/.config/waybar/noWconfig.jsonc -s ~/.config/waybar/noWstyle.css &
+      return 0
+    case "k" "-k"
+      if checkwaybar
+        echo "- Waybar terminated"
+        return 0
+      else
+        echo "- Waybar is not running or not detecetd"
+        return 1
+      end
+    case "*"
+      echo \n"  Custom Fish script to start Waybar with different configs."
+      echo "  Run this script with no flags to show this help message."
+      echo "  Keep in mind that this script starts Waybar with"\n"  logging disabled."
+      echo \n"  s, -s      Start Waybar with Sway configuration"
+      echo "  h, -h      Start Waybar with Hyprland configuration"
+      echo "  r, -r      Start Waybar with River configuration"
+      echo "  n, -n      Start Waybar with no workspaces support"
+      echo "  k, -k      Kill Waybar process"\n
+end
