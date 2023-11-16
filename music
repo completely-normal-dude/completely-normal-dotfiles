@@ -2,7 +2,7 @@
 
 # Waybar script to display music metadata 
 
-if not test (playerctl status -s)
+if not playerctl status -s
     printf " "
     exit
 end
