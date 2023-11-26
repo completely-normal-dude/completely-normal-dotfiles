@@ -51,6 +51,6 @@ end
 end
 
 
-if not printf $PATH | rg -q /home/void/.local/bin
+if not contains "/home/void/.local/bin" $PATH 
     set -x PATH "$PATH:/home/void/.local/bin"
 end
