@@ -9,7 +9,7 @@
 - Neofetch
 
 ### Sway and River
-There are Sway and River configuration files, but Hyprland's are a lot more polished
+There are Sway and River configuration files, but Hyprlands are a lot more polished
 
 # Screenshot
 Wallpaper's in the assets folder
